@@ -22,7 +22,7 @@ with st.sidebar:
     st.markdown("💡 **使用说明**\n1. 导出斑马进度计划为 Excel/CSV。\n2. 确保包含 TaskID, TaskName, Duration, Dependencies 字段。\n3. 点击上传即可自动分析。")
 
 # 初始化 AI 客户端
-client = OpenAI(api_key=api_key, base_url="https://api.deepseek.com")
+client = OpenAI(api_key=st.secrets["DEEPSEEK_API_KEY"], base_url="https://api.deepseek.com")
 
 # ==========================================
 # 2. 核心算法函数 (适配 Streamlit 返回值)
