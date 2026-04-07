@@ -152,7 +152,7 @@ if uploaded_file is not None:
                 try:
                     suggestions = get_optimization_plan(G_initial, total_dur_initial, cp_initial)
                 except Exception as e:
-                    st.error("AI 方案生成失败，请重试。")
+                     st.error(f"AI 方案生成失败，请重试。真实报错信息是：{e}")
                     st.stop()
             
             if suggestions:
